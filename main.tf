@@ -1,7 +1,12 @@
-	provider "aws" {
-  region = "us-east-1"
+terraform {
+  required_providers {
+    null = {
+      source = "hashicorp/null"
+    }
+  }
 }
 
-resource "null_resource" "example" {}
+provider "null" {}
 
+resource "null_resource" "example" {}
 
